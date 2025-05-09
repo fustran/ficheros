@@ -8,10 +8,8 @@ public class Ejercicio5 {
 
         File carpetas = new File("src/main/resources");
 
-
         filtrar(carpetas);
         filtrar(carpetas, ".pdf");
-
     }
 
     public static void filtrar(File carpeta){
@@ -21,6 +19,7 @@ public class Ejercicio5 {
         if (contenidoCarpeta != null && contenidoCarpeta.length > 0){
 
             for (String contenido : contenidoCarpeta){
+
                 if (contenido.endsWith(".txt")){
                     System.out.println(contenido);
                 }
@@ -40,7 +39,6 @@ public class Ejercicio5 {
 
             for (String contenido : contenidoCarpeta){
 
-
                 if (contenido.endsWith(text)){
                     existe = true;
                     System.out.println(contenido);
@@ -48,13 +46,11 @@ public class Ejercicio5 {
             }
 
             if (!existe) {
-                System.out.println("El formato no existe");
+                System.out.println("El formato " + text + " no existe.");
             }
 
         }else {
             System.out.println("La carpeta está vacía");
         }
-
     }
-
 }
