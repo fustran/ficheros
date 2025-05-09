@@ -32,6 +32,5 @@ public class Ejercicio4 {
         }else {
             System.out.println("ERROR: La ruta no existe...");
         }
-
     }
 }
