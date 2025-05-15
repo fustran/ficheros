@@ -8,10 +8,11 @@ import java.io.IOException;
 import java.util.WeakHashMap;
 
 public class Leer {
+
     public static void main(String[] args) {
 
         try {
-            BufferedReader lector = new BufferedReader(new FileReader("src/main/resources"));
+            BufferedReader lector = new BufferedReader(new FileReader("src/main/resources/Lorem.txt"));
             String linea;
 
             while ((linea = lector.readLine()) != null){
@@ -21,8 +22,7 @@ public class Leer {
 
             lector.close();
 
-        } catch (
-                IOException e) {
+        } catch (IOException e) {
             System.out.println("Algo ha ido mal");
             e.printStackTrace();
         }

@@ -8,7 +8,6 @@ public class Escribir {
 
     public static void main(String[] args) {
 
-
         try {
             BufferedWriter escribir =  new BufferedWriter(new FileWriter("src/main/resources/prueba.txt"));
             escribir.write("David bueno vs David malo");
