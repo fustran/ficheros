@@ -26,10 +26,14 @@ public class Serializar {
             leerObjeto.close();
 
             System.out.println();
-            System.out.println("Nombre del festival: " + noventerosLeidos.getNombre() + ", Fecha: " + noventerosLeidos.getFecha() + ", Aforo: " + noventerosLeidos.getAforo() + ", Lugar: " + noventerosLeidos.getLugar() + ".");
+            System.out.println(
+                    "Nombre del festival: " + noventerosLeidos.getNombre() +
+                    ", Fecha: " + noventerosLeidos.getFecha() +
+                    ", Aforo: " + noventerosLeidos.getAforo() +
+                    ", Lugar: " + noventerosLeidos.getLugar() + ".");
 
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Algo ha ido mal");
+            System.out.println("Algo ha ido mal.");
             e.printStackTrace();
         }
 
