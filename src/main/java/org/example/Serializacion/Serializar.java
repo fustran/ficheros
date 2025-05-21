@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Serializacion;
 
 import java.io.*;
 import java.util.Date;
@@ -11,7 +11,7 @@ public class Serializar {
 
         //Serializar con Output
         try {
-            ObjectOutputStream objetoSerializado = new ObjectOutputStream(new FileOutputStream("src/main/resources/Festival.serializable"));
+            ObjectOutputStream objetoSerializado = new ObjectOutputStream(new FileOutputStream("src/main/resources/Serializacion/Festival.ser"));
             objetoSerializado.writeObject(noventeros);
             objetoSerializado.close();
 
@@ -21,7 +21,7 @@ public class Serializar {
         }
 
         try {
-            ObjectInputStream leerObjeto = new ObjectInputStream(new FileInputStream("src/main/resources/Festival.serializable"));
+            ObjectInputStream leerObjeto = new ObjectInputStream(new FileInputStream("src/main/resources/Serializacion/Festival.ser"));
             Festival noventerosLeidos = (Festival) leerObjeto.readObject();
             leerObjeto.close();
 

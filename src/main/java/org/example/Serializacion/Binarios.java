@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Serializacion;
 
 import java.io.*;
 
@@ -11,7 +11,7 @@ public class Binarios {
 
         // Data Output
         try {
-            DataOutputStream fichero_binario = new DataOutputStream(new FileOutputStream("src/main/resources/ficherito.bin"));
+            DataOutputStream fichero_binario = new DataOutputStream(new FileOutputStream("src/main/resources/Serializacion/ficherito.bin"));
             fichero_binario.writeBoolean(true);
             fichero_binario.writeDouble(3.500);
             fichero_binario.writeInt(10);
@@ -25,7 +25,7 @@ public class Binarios {
 
         // Data Input
         try {
-            DataInputStream leer = new DataInputStream(new FileInputStream("C:\\Users\\ifusi\\IdeaProjects\\ficheros\\src\\main\\resources\\ficherito.bin"));
+            DataInputStream leer = new DataInputStream(new FileInputStream("C:\\Users\\ifusi\\IdeaProjects\\ficheros\\src\\main\\resources\\Serializacion\\ficherito.bin"));
             boolean booleano = leer.readBoolean();
             double doble = leer.readDouble();
             int entero = leer.readInt();
@@ -41,7 +41,7 @@ public class Binarios {
 
         //File Input
         try {
-            FileInputStream leerACiegas = new FileInputStream("src/main/resources/ficherito.bin");
+            FileInputStream leerACiegas = new FileInputStream("src/main/resources/Serializacion/ficherito.bin");
             int bytes;
 
             while((bytes = leerACiegas.read()) != -1){
